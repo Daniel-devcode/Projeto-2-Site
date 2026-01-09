@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BumBet</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style (1).css" />
+  <link rel="stylesheet" href="../css/config.css" />
+  <link rel="stylesheet" href="../css/pesquisa.css" />
+  <link rel="stylesheet" href="../css/paginalat.css" />
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <h1>BumBet</h1>
+
+    <div id="cadastro" class="menu-direito">
+      <!-- Ícone de presente -->
+      
+
+      <!-- Ícone de busca -->
+      <span id="openModalBtn" class="btn" title="Pesquisar" style="cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M10 2a8 8 0 015.293 13.707l4.147 4.147-1.414 1.414-4.147-4.147A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/>
+        </svg>
+      </span>
+
+      <!-- Ícone de configurações -->
+      <span onclick="openModal()" class="bntconf" title="Configurações" style="cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M19.14 12.94a7.97 7.97 0 000-1.88l2.03-1.58a.5.5 0 00.12-.63l-1.92-3.32a.5.5 0 00-.6-.22l-2.39.96a8.06 8.06 0 00-1.6-.93l-.36-2.54a.5.5 0 00-.5-.44h-3.84a.5.5 0 00-.5.44l-.36 2.54a8.06 8.06 0 00-1.6.93l-2.39-.96a.5.5 0 00-.6.22l-1.92 3.32a.5.5 0 00.12.63l2.03 1.58a7.97 7.97 0 000 1.88l-2.03 1.58a.5.5 0 00-.12.63l1.92 3.32a.5.5 0 00.6.22l2.39-.96a8.06 8.06 0 001.6.93l.36 2.54a.5.5 0 00.5.44h3.84a.5.5 0 00.5-.44l.36-2.54a8.06 8.06 0 001.6-.93l2.39.96a.5.5 0 00.6-.22l1.92-3.32a.5.5 0 00-.12-.63l-2.03-1.58zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
+        </svg>
+      </span>
+
+      <!-- Login e Registro -->
+      <a href="../html/registrar.html" class="registrar">Registrar</a>
+      <a href="../html/login.html" class="entrar">Entrar</a>
+    </div>
+  </header>
+
+  <!-- ===== Conteúdo Principal ===== -->
+  <div class="container">
+    <!-- ===== Barra Lateral ===== -->
+    <aside class="sidebar">
+      <ul>
+        <li><i class="fa-solid fa-ticket"></i> Próximos jogos</li>
+        <li><i class="fa-solid fa-trophy"></i> Vencedores da Competição</li>
+        <li><i class="fa-solid fa-star"></i> Especiais</li>
+        <li><i class="fa-solid fa-coins"></i> Apostas por Odds</li>
+        <li><i class="fa-solid fa-flag-checkered"></i> Missões</li>
+        <li><i class="fa-brands fa-android"></i> Android</li>
+        <li><i class="fa-solid fa-gamepad"></i> Virtuais</li>
+        <li><i class="fa-solid fa-list-ol"></i> Bolão</li>
+      </ul>
+
+      <h3>Competições Favoritas</h3>
+      <ul class="favorites">
+        <li>Brasileirão - Série A</li>
+        <li>Copa Libertadores</li>
+        <li>Copa Sul-Americana</li>
+      </ul>
+
+      <h3>Esportes</h3>
+      <ul class="favorites">
+        <li><i class="fa-solid fa-futbol"></i> Futebol</li>
+        <li><i class="fa-solid fa-basketball"></i> Basquete</li>
+        <li><i class="fa-solid fa-baseball"></i> Tênis</li>
+        <li><i class="fa-solid fa-volleyball"></i> Vôlei</li>
+        <li><i class="fa-solid fa-hand-fist"></i> Handebol</li>
+      </ul>
+    </aside>
+
+    <!-- ===== Conteúdo Central ===== -->
+    <main class="main-content">
+      <!-- Jogos ao Vivo (Cards) -->
+      <section class="live-cards-container">
+        <div class="live-card">
+          <img src="https://platform.bitterandblue.sbnation.com/wp-content/uploads/sites/29/chorus/uploads/chorus_asset/file/9580059/862512820.jpg"
+            alt="Manchester City vs Napoli">
+          <div class="card-content">
+            <div class="tempo">67:11</div>
+            <div class="times">
+              <span>Manchester City <strong>2</strong></span>
+              <span>Napoli <strong>0</strong></span>
+            </div>
+            <div class="odds">
+              <div class="odd-btn green">1<br>1.009</div>
+              <div class="odd-btn">X<br>25.00</div>
+              <div class="odd-btn green">2<br>35.00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="live-card">
+          <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=1280,height=720,quality=75,format=webp/uploads/2025/04/lewandowski-lamine-raphinha-1920x1565.jpeg"
+            alt="Newcastle vs Barcelona">
+          <div class="card-content">
+            <div class="tempo">66:09</div>
+            <div class="times">
+              <span>Newcastle United <strong>0</strong></span>
+              <span>Barcelona <strong>2</strong></span>
+            </div>
+            <div class="odds">
+              <div class="odd-btn green">1<br>32.00</div>
+              <div class="odd-btn">X<br>9.50</div>
+              <div class="odd-btn green">2<br>1.08</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="live-card">
+          <img src="https://media.eintracht.de/image/upload/ar_3:2,c_fill,dpr_3.0,f_auto,g_xy_center,q_60,w_400,x_w_mul_0.53,y_h_mul_0.43/v1758035737/galatasaray-team-jubel-0056"
+            alt="Eintracht Frankfurt vs Galatasaray">
+          <div class="card-content">
+            <div class="tempo">64:13</div>
+            <div class="times">
+              <span>Eintracht Frankfurt <strong>3</strong></span>
+              <span>Galatasaray <strong>1</strong></span>
+            </div>
+            <div class="odds">
+              <div class="odd-btn green">1<br>1.07</div>
+              <div class="odd-btn">X<br>10.00</div>
+              <div class="odd-btn green">2<br>35.00</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Painel de Jogos -->
+      <section class="painel-jogos">
+        <div class="painel-header">
+          <h2>Jogos ao Vivo</h2>
+          <div class="painel-filtros">
+            <button class="ativo">Highlights</button>
+            <button>Futebol</button>
+            <button>Tênis</button>
+            <button>Basquete</button>
+            <button>Vôlei</button>
+            <button>Esports</button>
+          </div>
+        </div>
+
+        <div class="painel-conteudo">
+          <div class="jogo">
+            <span class="liga">Brasil - Copa do Brasil</span>
+            <div class="times">
+              <span>Internacional x Fluminense </span>
+            </div>
+            <div class="odds">
+              <button>2.25</button>
+              <button>X 3.20</button>
+              <button>3.10</button>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <span class="liga">Inglaterra - Premier League</span>
+            <div class="times">
+              <span>Chelsea x Liverpool</span>
+            </div>
+            <div class="odds">
+              <button>2.80</button>
+              <button>X 3.40</button>
+              <button>2.50</button>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <span class="liga">Espanha - La Liga</span>
+            <div class="times">
+              <span>Real Madrid x Sevilla</span>
+            </div>
+            <div class="odds">
+              <button>1.55</button>
+              <button>X 4.00</button>
+              <button>6.20</button>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <span class="liga">Itália - Serie A</span>
+            <div class="times">
+              <span>Juventus x AC Milan</span>
+            </div>
+            <div class="odds">
+              <button>2.10</button>
+              <button>X 3.25</button>
+              <button>3.40</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== Modais ===== -->
+  <div id="menu-princi" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()" class="bntconf">&times;</span>
+      <h2>Configurações</h2>
+      <div class="section">
+        <h4>Idioma</h4>
+        <div class="option" onclick="selectLanguage(this)">
+          <button><img src="https://flagcdn.com/w20/br.png" alt="BR"> Português (Brasil)</button>
+        </div>
+        <div class="option1" onclick="selectLanguage(this)">
+          <button><img src="https://flagcdn.com/w20/gb.png" alt="EN"> English</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Pesquisa-->
+  <div id="searchModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2>Pesquisa</h2>
+      <input type="text" id="searchInput" placeholder="Digite sua pesquisa..." />
+      <button class="btn">Pesquisar</button>
+    </div>
+  </div>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    © 2025 BumBet. Todos os direitos reservados.
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script src="../js/script.js" defer></script>
+  <script src="../js/pesquisa.js" defer></script>
+
+  <script>
+    // Modal Configurações
+    function openModal() {
+      document.getElementById("menu-princi").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("menu-princi").style.display = "none";
+    }
+    window.onclick = function (event) {
+      let modal = document.getElementById("menu-princi");
+      if (event.target == modal) closeModal();
+    }
+
+    function selectLanguage(element) {
+      document.querySelectorAll('.option, .option1').forEach(opt => opt.classList.remove('selected'));
+      element.classList.add('selected');
+    }
+
+    // Modal Pesquisa
+    const modalSearch = document.getElementById("searchModal");
+    const openModalBtn = document.getElementById("openModalBtn");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    openModalBtn.onclick = () => modalSearch.style.display = "flex";
+    closeModalBtn.onclick = () => modalSearch.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modalSearch) modalSearch.style.display = "none";
+    };
+  </script>
+</body>
+</html>
